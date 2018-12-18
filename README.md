@@ -9,7 +9,7 @@ The stack_allocate.c file and the heap_allocate.c file are testing files. They a
 ./stack_allocate <number of pages>
 ./heap_allocate <number of pages>
 ```
-Note that these processes will not exit unless the user aborts them. This is to allow the user to use pages to see the page mappings for these processes. Each process automatically prints its pid so that the pid can be easily entered into the pages process.
+Note that these processes will not exit unless the user enters a character. This is to allow the user to use pages to see the page mappings for these processes. Each process automatically prints its pid so that the pid can be easily entered into the pages process.
 
 # Obtaining the Mappings
 The pages.c file contains the code that will actually find a process' virtual memory address for the stack and the heap and translate them to physical memory addresses. Once the user compiles the program, they can run it with the following format:
