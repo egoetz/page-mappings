@@ -7,6 +7,17 @@
 
 #define PAGEMAP_ENTRY_SIZE 8
 
+/*
+ * Prints out the memory mappings of a program's stack and heap.
+ * Precondition: A process id indicating which process' memory to examine.
+ * If no id is specified, then this process' memory is examined.
+ * Postcondition: 1 is returned if an incorrect number of arguments is passed.
+ * 2 is returned if the linux proc files maps and pagemap cannot be opened.
+ * 3 is returned if pagemap cannot be read.
+ * 0 is return if the function exits gracefully
+ * Side effects: Prints the virtual address to physical address page mapings
+ * for the desired process' stack and heap.
+*/
 int main(int argc, char **argv){
     pid_t pid;
     if(argc == 1){
