@@ -4,6 +4,13 @@
 #include <unistd.h>
 #include <string.h>
 
+/*
+ * Adds a specified number of pages to the heap.
+ * Precodition: Must give an arguement representing the number of pages. 
+ * Postcondition: Will return 1 if incorrect number of args is passed.
+ * Will exit successfully return 0 after a char input.
+ * Side effects: Allocates the specified number of pages on the heap.
+*/
 int main(int argc, char **argv){
     if(argc != 2){
         fprintf(stderr, "You must pass a size and only a size as an arg.\n");
